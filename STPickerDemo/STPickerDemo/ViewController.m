@@ -73,6 +73,9 @@
         [pickerDate setYearLeast:2000];
         [pickerDate setYearSum:50];
         [pickerDate setDelegate:self];
+        [pickerDate setNewYear:2001];
+        [pickerDate setNewMonth:1];
+        [pickerDate setNewDay:1];
         [pickerDate show];
     }
 }

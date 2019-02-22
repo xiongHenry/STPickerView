@@ -129,6 +129,27 @@ typedef NS_OPTIONS(NSUInteger, STCalendarUnit) {
 }
 
 #pragma mark - --- private methods 私有方法 ---
+- (void)setNewYear:(NSInteger)year {
+    _year = year;
+    [self reloadPickerView];
+}
+
+- (void)setNewMonth:(NSInteger)month {
+    _month = month;
+    [self reloadPickerView];
+}
+
+- (void)setNewDay:(NSInteger)day {
+    _day = day;
+    [self reloadPickerView];
+}
+
+- (void)reloadPickerView {
+    [self.pickerView selectRow:(_year - _yearLeast) inComponent:0 animated:NO];
+    [self.pickerView selectRow:(_month - 1) inComponent:1 animated:NO];
+    [self.pickerView selectRow:(_day - 1) inComponent:2 animated:NO];
+    [self.pickerView reloadAllComponents];
+}
 
 #pragma mark - --- setters 属性 ---
 

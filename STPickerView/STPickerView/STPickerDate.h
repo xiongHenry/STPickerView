@@ -25,5 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, weak)id <STPickerDateDelegate>delegate ;
 
+- (void)setNewYear:(NSInteger)year;
+- (void)setNewMonth:(NSInteger)month;
+- (void)setNewDay:(NSInteger)day;
+
 @end
 NS_ASSUME_NONNULL_END
